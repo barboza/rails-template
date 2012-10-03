@@ -24,6 +24,8 @@ gem 'heroku'
 gem 'jquery-rails'
 gem "slim"
 gem "slim-rails"
+gem 'initjs'
+gem 'rack-google-analytics'
 
 # Tools
 #gem 'simple_form'
@@ -38,6 +40,7 @@ group :assets do
   gem "compass-rails", "~> 1.0.3"
   #gem 'bootstrap-sass'
   gem 'uglifier', '>= 1.0.3'
+  #gem 'turbolinks'
 end
 
 group :production do

@@ -69,6 +69,7 @@ apply_n :git
 apply_n :cleanup
 apply_n :gems
 apply_n :default
+apply_n :google_analytics
 apply_n :database
 apply_n :rspec
 apply_n :backbone
