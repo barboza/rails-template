@@ -60,7 +60,7 @@ def would_you_like?(question)
 end
 
 puts "\n========================================================="
-puts " STARTUPDEV RAILS 3 TEMPLATE".yellow.bold
+puts " JOSEMAR LUEDKE RAILS 3 TEMPLATE".yellow.bold
 puts "=========================================================\n"
 
 # TODO: timezone, Add rspec extensions
@@ -69,6 +69,7 @@ apply_n :git
 apply_n :cleanup
 apply_n :gems
 apply_n :default
+apply_n :locale
 apply_n :google_analytics
 apply_n :database
 apply_n :rspec

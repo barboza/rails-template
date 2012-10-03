@@ -13,19 +13,6 @@ git :commit => "-aqm 'Added application layout in slim'"
 
 
 
-copy_static_file 'config/locales/devise.views.en.yml'
-copy_static_file 'config/locales/devise.simple_form.en.yml'
-git :add => '.'
-git :commit => "-aqm 'Added default locales for en.'"
-
-
-
-copy_static_file 'config/locales/rails.pt-BR.yml'
-git :add => '.'
-git :commit => "-aqm 'Added rails locale for pt-BR'"
-
-
-
 copy_static_file '.gitignore'
 git :add => '.'
 git :commit => "-aqm 'Added .gitignore'"
