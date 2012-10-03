@@ -24,6 +24,7 @@ gem 'heroku'
 gem 'jquery-rails'
 gem "slim"
 gem "slim-rails"
+gem 'initjs'
 
 # Tools
 #gem 'simple_form'

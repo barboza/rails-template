@@ -10,7 +10,8 @@ html
     = yield(:meta_tags)
     = csrf_meta_tag
     = javascript_include_tag "application"
-  body data-controller-class=controller.class.name data-controller-name=controller.controller_name.camelize data-action=controller.action_name.camelize
+  body
+    = initjs_tag
     header
     = yield
     footer
