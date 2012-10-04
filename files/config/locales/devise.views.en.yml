@@ -27,16 +27,23 @@ en:
         resend_confirmation_instructions: "Resend confirmation instructions"
     mailer:
       confirmation_instructions:
-        welcome_email: "Welcome %{email}!"
-        you_can_confirm_your_account: "You can confirm your account email through the link below:"
+        subject: "Confirmation instructions"
+        greeting: "Welcome %{recepient}!"
+        instruction: "You can confirm your account email through the link below:"
+        action: "Confirm my account"
       reset_password_instructions:
-        if_you_didn_t_request_this: "If you didn't request this, please ignore this email."
-        your_password_wont_change: "Your password won't change until you access the link above and create a new one."
-        someone_has_requested_a_link_to_change_your_password: "Someone has requested a link to change your password, and you can do this through the link below."
+        subject: "Reset password instructions"
+        greeting: "Hello %{recepient}!"
+        instruction: "Someone has requested a link to change your password, and you can do this through the link below."
+        action: "Change my password"
+        instruction_2: "If you didn't request this, please ignore this email."
+        instruction_3: "Your password won't change until you access the link above and create a new one."
       unlock_instructions:
-        hello_email: "Hello %{email}!"
-        your_account_has_been_locked: "Your account has been locked due to an excessive amount of unsuccessful sign in attempts."
-        click_the_link_below: "Click the link below to unlock your account:"
+        subject: "Unlock Instructions"
+        greeting: "Hello %{recepient}!"
+        message: "Your account has been locked due to an excessive amount of unsuccessful sign in attempts."
+        instruction: "Click the link below to unlock your account:"
+        action: "Unlock my account"
     passwords:
       edit:
         change_your_password: "Change your password"
