@@ -5,6 +5,12 @@ git :add => '.'
 git :commit => "-aqm 'Added partial for flash messages'"
 
 
+copy_static_file 'app/views/layouts/_header.html.slim'
+copy_static_file 'app/views/layouts/_footer.html.slim'
+git :add => '.'
+git :commit => "-aqm 'Added header and footer partial for layout'"
+
+
 
 copy_static_file 'app/views/layouts/application.html.slim'
 gsub_file 'app/views/layouts/application.html.slim', /PROJECT/, @app_name
@@ -16,6 +22,13 @@ git :commit => "-aqm 'Added application layout in slim'"
 copy_static_file '.gitignore'
 git :add => '.'
 git :commit => "-aqm 'Added .gitignore'"
+
+
+
+gsub_file 'config/environments/development.rb', "::Application.configure do", "::Application.configure do
+  Slim::Engine.set_default_options :pretty => true"
+git :add => '.'
+git :commit => "-aqm 'Added Slim pretty option'"
 
 
 
