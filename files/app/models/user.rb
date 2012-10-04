@@ -9,11 +9,11 @@ class User < ActiveRecord::Base
 
   def self.new_with_session(params, session)
     super.tap do |user|
-      if data = session[:omniauth] && session[:omniauth]["info"]
-        user.email = data["email"] if data["email"].present?
-        user.name = data["name"]
-        user.image = data["image"]
-        user.authorizations.build(provider: session[:omniauth]['provider'], uid: session[:omniauth]['uid'])
+      if auth = session[:omniauth]
+        user.email = auth.info.email if auth.info.email.present?
+        user.name = auth.info.name
+        user.image = auth.info.image
+        user.authorizations.build(provider: auth.provider, uid: auth.uid)
       end
     end
   end
@@ -23,3 +23,5 @@ class User < ActiveRecord::Base
     "http://gravatar.com/avatar/#{Digest::MD5.new.update(email)}.jpg?s=50"
   end
 end
+
+
