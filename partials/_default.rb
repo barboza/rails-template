@@ -25,6 +25,13 @@ git :commit => "-aqm 'Added .gitignore'"
 
 
 
+gsub_file 'config/environments/development.rb', "::Application.configure do", "::Application.configure do
+  Slim::Engine.set_default_options :pretty => true"
+git :add => '.'
+git :commit => "-aqm 'Added Slim pretty option'"
+
+
+
 gsub_file 'app/controllers/application_controller.rb', "end", "
   protected
   def render_404
