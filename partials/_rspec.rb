@@ -9,6 +9,7 @@ git :commit => "-aqm 'Add RSpec support files.'"
 
 after_bundler do
   generate 'rspec:install'
+  copy_static_file '.rspec'
   generate 'machinist:install'
   run 'bundle exec jasmine init '
   run 'rm -f public/javascripts/Player.js public/javascripts/Song.js spec/javascripts/PlayerSpec.js spec/javascripts/helpers/SpecHelper.js lib/tasks/jasmine.rake'
