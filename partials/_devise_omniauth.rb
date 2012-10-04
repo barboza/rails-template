@@ -8,7 +8,7 @@ after_bundler do
   generate 'devise:install'
   configs = <<CONFIGS
 
-  config.omniauth :facebook, 'APP_ID', 'APP_SECRET'
+  config.omniauth :facebook, 'APP_ID', 'APP_SECRET', scope: 'email', image_size: 'normal'
   config.omniauth :twitter, 'APP_ID', 'APP_SECRET'
 CONFIGS
 
