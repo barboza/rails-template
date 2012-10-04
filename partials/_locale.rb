@@ -4,8 +4,9 @@ puts "Locales ...".magenta
 
 if @use_locale_pt
   copy_static_file 'config/locales/rails.pt-BR.yml'
+  copy_static_file 'config/locales/devise.pt-BR.yml'
   git :add => '.'
-  git :commit => "-aqm 'Added rails locale for pt-BR'"
+  git :commit => "-aqm 'Added default locale for pt-BR'"
 end
 
 
