@@ -18,9 +18,9 @@ class User < ActiveRecord::Base
     end
   end
 
-  def avatar_url
-    return image if image
-    "http://gravatar.com/avatar/#{Digest::MD5.new.update(email)}.jpg?s=50"
+  def avatar_url(size = 100)
+    return image if image.present?
+    "http://gravatar.com/avatar/#{Digest::MD5.new.update(email)}.jpg?s=#{size}"
   end
 end
 
