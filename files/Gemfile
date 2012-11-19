@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.9'
 
 # Database
 gem 'pg'
@@ -12,9 +12,9 @@ gem 'inherited_resources'
 
 # Authentication
 #gem "devise", "~> 2.1.2"
-#gem "omniauth", "~> 1.1.0"
-#gem "omniauth-facebook", "~> 1.2.0"
-#gem "omniauth-twitter", "~> 0.0.12"
+#gem "omniauth", "~> 1.1.1"
+#gem "omniauth-facebook", "~> 1.4.1"
+#gem "omniauth-twitter", "~> 0.0.14"
 
 # Heroku - Server
 gem 'thin'
@@ -49,7 +49,7 @@ group :production do
 end
 
 group :development, :test do
-  gem "rspec-rails", ">= 2.11.0"
+  gem "rspec-rails", ">= 2.12.0"
   gem "shoulda-matchers"
   gem "machinist", ">= 2.0"
   gem "ffaker"
