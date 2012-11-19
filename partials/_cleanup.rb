@@ -11,8 +11,6 @@ remove_file "app/assets/images/rails.png"
 
 inside "public" do
 	remove_file "index.html"
-	remove_file "favicon.ico"
-	remove_file "robots.txt"
 end
 
 git :add => '.'
