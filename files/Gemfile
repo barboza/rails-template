@@ -14,7 +14,7 @@ gem 'inherited_resources'
 #gem 'simple_form'
 
 # Authentication
-#gem 'devise, '~> 2.1.2'
+#gem 'devise', '~> 2.1.2'
 #gem 'omniauth', '~> 1.1.1'
 #gem 'omniauth-facebook', '~> 1.4.1'
 #gem 'omniauth-twitter', '~> 0.0.14'
