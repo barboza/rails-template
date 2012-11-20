@@ -4,58 +4,49 @@ gem 'rails', '3.2.9'
 
 # Database
 gem 'pg'
-gem "foreigner"
+gem 'foreigner'
+
+# Server
+gem 'thin'
 
 # Improvements
 gem 'inherited_resources'
-#gem 'has_scope'
+#gem 'simple_form'
 
 # Authentication
-#gem "devise", "~> 2.1.2"
-#gem "omniauth", "~> 1.1.1"
-#gem "omniauth-facebook", "~> 1.4.1"
-#gem "omniauth-twitter", "~> 0.0.14"
-
-# Heroku - Server
-gem 'thin'
-gem 'heroku'
+#gem 'devise, '~> 2.1.2'
+#gem 'omniauth', '~> 1.1.1'
+#gem 'omniauth-facebook', '~> 1.4.1'
+#gem 'omniauth-twitter', '~> 0.0.14'
 
 # Frontend stuff
 gem 'jquery-rails'
-gem "slim"
-gem "slim-rails"
+gem 'slim-rails'
 gem 'initjs'
 gem 'rack-google-analytics'
-
-# Tools
-#gem 'simple_form'
-#gem 'auto_html'
-
-# Administration
-#gem 'activeadmin'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.5'
   gem 'coffee-rails', '~> 3.2.2'
-  gem "compass-rails", "~> 1.0.3"
-  #gem 'bootstrap-sass'
+  gem 'compass-rails', '~> 1.0.3'
   gem 'uglifier', '>= 1.0.3'
   #gem 'turbolinks'
+  #gem 'bootstrap-sass'
 end
 
 group :production do
-  gem "execjs"
-  gem 'therubyracer', :platform => :ruby
+  gem 'execjs'
+  gem 'therubyracer', platform: :ruby
 end
 
 group :development, :test do
-  gem "rspec-rails", ">= 2.12.0"
-  gem "shoulda-matchers"
-  gem "machinist", ">= 2.0"
-  gem "ffaker"
+  gem 'rspec-rails', '~> 2.12.0'
+  gem 'shoulda-matchers', '~> 1.4.1'
+  gem 'machinist', '~> 2.0'
   gem 'database_cleaner'
-  gem "capybara"
-  gem "jasmine"
-  gem "pry"
+  gem 'capybara'
+  gem 'ffaker'
+  gem 'pry'
   gem 'awesome_print'
 end
+
