@@ -23,7 +23,6 @@ A rails application template.
 15. Heroku (staging and production apps)
 16. Heroku accounts (if you use)
 17. Simple Form
-17. Some pt-BR locales
 18. Rspec
 19. Shoulda
 20. Machinist
@@ -54,7 +53,7 @@ rails new app_name -m ~/rails-template/template.rb
 ```
 
 4. That's it! Everything should be in place.
- 
+
 
 ## Usage with devise and omniauth
 
