@@ -22,11 +22,11 @@
           = content_tag :span, content_tag(:i, "", :class => 'icon-envelope'), :class => "add-on"
           = f.input_field :email
 
-      = f.input :password, :required => true, :wrapper => :prepend do
+      = f.input :password, :required => true, :hint => false, :wrapper => :prepend do
         = content_tag :span, content_tag(:i, "", :class => 'icon-lock'), :class => "add-on"
         = f.input_field :password
 
-    = f.input :password_confirmation, :required => true, :wrapper => :prepend do
+    = f.input :password_confirmation, :required => true, :hint => false, :wrapper => :prepend do
       = content_tag :span, content_tag(:i, "", :class => 'icon-lock'), :class => "add-on"
       = f.input_field :password_confirmation
 
