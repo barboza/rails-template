@@ -1,11 +1,5 @@
-#
-# startupdev-rails-template
-#
 # Usage:
 #   rails new appname -m /path/to/template.rb
-#
-# Also see http://textmate.rubyforge.org/thor/Thor/Actions.html
-#
 
 %w{colored}.each do |component|
   if Gem::Specification.find_all_by_name(component).empty?
@@ -69,7 +63,6 @@ apply_n :git
 apply_n :cleanup
 apply_n :gems
 apply_n :default
-apply_n :locale
 apply_n :google_analytics
 apply_n :database
 apply_n :rspec

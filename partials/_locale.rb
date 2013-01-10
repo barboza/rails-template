@@ -3,7 +3,6 @@ puts "Locales ...".magenta
 @use_locale_pt = would_you_like? "Use pt-BR locales? [y,n]".red
 
 if @use_locale_pt
-  copy_static_file 'config/locales/rails.pt-BR.yml'
   copy_static_file 'config/locales/devise.pt-BR.yml'
   git :add => '.'
   git :commit => "-aqm 'Added default locale for pt-BR'"
