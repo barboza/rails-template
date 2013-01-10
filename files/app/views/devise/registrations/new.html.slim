@@ -13,23 +13,12 @@
     = f.error_notification
     .form-inputs
       - unless resource.name.present? and resource.authorizations.any? and not resource.errors.include? :name
-        = f.input :name, :required => true, :autofocus => true, :wrapper => :prepend do
-          = content_tag :span, content_tag(:i, "", :class => 'icon-user'), :class => "add-on"
-          = f.input_field :name
-
+        = f.input :name, :required => true, :autofocus => true
       - unless resource.email.present? and resource.authorizations.any? and not resource.errors.include? :email
-        = f.input :email, :required => true, :wrapper => :prepend do
-          = content_tag :span, content_tag(:i, "", :class => 'icon-envelope'), :class => "add-on"
-          = f.input_field :email
+        = f.input :email, :required => true
+      = f.input :password, :required => true, :hint => false
+    = f.input :password_confirmation, :required => true, :hint => false
 
-      = f.input :password, :required => true, :hint => false, :wrapper => :prepend do
-        = content_tag :span, content_tag(:i, "", :class => 'icon-lock'), :class => "add-on"
-        = f.input_field :password
-
-    = f.input :password_confirmation, :required => true, :hint => false, :wrapper => :prepend do
-      = content_tag :span, content_tag(:i, "", :class => 'icon-lock'), :class => "add-on"
-      = f.input_field :password_confirmation
-
-    = f.button :submit, t(".sign_up"), class: "btn-primary"
+    = f.button :submit, t(".sign_up")
   = render "devise/shared/links"
 
