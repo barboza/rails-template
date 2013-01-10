@@ -65,6 +65,7 @@ apply_n :gems
 apply_n :default
 apply_n :google_analytics
 apply_n :database
+apply_n :locale
 apply_n :rspec
 apply_n :backbone
 apply_n :javascripts
