@@ -54,3 +54,6 @@ group :development, :test do
   gem 'awesome_print'
 end
 
+group :development do
+  gem 'better_errors'
+end
