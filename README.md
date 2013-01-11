@@ -35,9 +35,8 @@ question  Use a form builder gem?
       1)  None
       2)  SimpleForm
 
-question  Enter your selection:
 question  Which RVM Ruby would you like to use? [ruby-1.9.3-p327]
-question  What name should the custom gemset have? [app_name] 
+question  What name should the custom gemset have? [app_name]
 question  Configure/Create Heroku app? [y/n]
 ```
 
@@ -47,7 +46,7 @@ question  Configure/Create Heroku app? [y/n]
 - Database configurations - database.sample.yml
 - Flash messages partial
 - Header and Footer partial for layout
-- Great .giignore
+- Great .gitignore
 - Great and useful gems (Check the Gemfile :D)
 - Config the rails generators
 
