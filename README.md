@@ -53,12 +53,12 @@ question  Configure/Create Heroku app? [y/n]
 
 ## Some Preferences
 
+- PostgreSQL
 - Slim
 - Sass
 - Init.js
 - Shoulda
 - Machinist
-
 
 ## Usage
 
