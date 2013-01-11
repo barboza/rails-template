@@ -29,8 +29,8 @@ def prefer(key, value); @prefs[key].eql? value end
 def apply_n(partial); apply "#{@partials}/_#{partial}.rb"; end
 def say_custom(tag, text); say "\033[1m\033[36m" + tag.to_s.rjust(10) + "\033[0m" + "  #{text}" end
 
-def ask_wizard(question)
-  ask "\033[1m\033[30m\033[46m" + (@current_recipe || "prompt").rjust(10) + "\033[1m\033[36m" + "  #{question}\033[0m"
+def ask_wizard(question, tag = "prompt")
+  ask "\033[1m\033[30m\033[46m" + (@current_recipe || tag).rjust(10) + "\033[1m\033[36m" + "  #{question}\033[0m"
 end
 
 # Copy a static file from the template into the new application
@@ -41,7 +41,7 @@ def copy_static_file(path, new_path = false)
 end
 
 def yes_wizard?(question)
-  answer = ask_wizard(question + " \033[33m[y/n]\033[0m")
+  answer = ask_wizard(question + " \033[33m[y/n]\033[0m", "question")
   case answer.downcase
     when "yes", "y"
       true

@@ -3,10 +3,10 @@ require 'machinist/active_record'
 # Add your blueprints here.
 
 User.blueprint do
-  name {'Josemar Davi Luedke'}
-  email {'josemarluedke@gmail.com'}
-  password {'josemar'}
-  password_confirmation {'josemar'}
+  name {'Some nice guy'}
+  email {"someniceguy#{sn}@gmail.com"}
+  password {'niceguy'}
+  password_confirmation {'niceguy'}
 end
 
 Authorization.blueprint do

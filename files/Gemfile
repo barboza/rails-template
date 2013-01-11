@@ -50,7 +50,6 @@ group :development, :test do
   gem 'machinist', '~> 2.0'
   gem 'database_cleaner'
   gem 'capybara'
-  gem 'ffaker'
   gem 'pry'
   gem 'awesome_print'
 end

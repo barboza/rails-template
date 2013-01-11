@@ -1,43 +1,63 @@
 # Rails Template
 
-A rails application template.
+A Rails Template that creates a great Rails starter app.
 
-## Features
+## Your Options
 
-### Geral
+The Rails Template will ask to you for various preferences, some of which will depend on previous choices.
 
-1. Backbone.js files
-2. Cleanup your app - Remove unused files
-3. Database configurations - database.sample.yml
-4. Slim
-5. Flash messages partial
-6. Header and Footer partial for layout
-7. Great .giignore
-8. Great and useful gems
-9. Config the rails generators
-10. Git
-11. Javascripts and Init.js
-12. Sass
-13. Twitter Bootstrap
-14. Google Analytics
-15. Heroku (staging and production apps)
-16. Heroku accounts (if you use)
-17. Simple Form
-18. Rspec
-19. Shoulda
-20. Machinist
-19. RVM
+Here’s an example:
 
-### devise-omniauth Features
+```
+question  What front-end framework do you want use?
+      1)  None
+      2)  Twitter Bootstrap
+      3)  Zurb Foundation
 
-1. Devise
-2. Omniauth (Default -> Facebook and Twitter)
-3. I18n Devise views
-4. Users Model
-5. Authorizations Model and Controller
-6. omniauth_callbacks Controller
-7. Specs
-8. Translations in pt-BR and en for devise
+question  Do you want use CoffeeScript? [y/n]
+
+question  What Javascript framework do you want use?
+      1)  None
+      2)  Backbone.js
+      3)  Underscore.js
+      4)  Backbone.js, Underscore.js
+
+question  Pre configure the Google Analytics? [y/n]
+
+question  Install a starter app?
+      1)  None
+      2)  Home Page
+      3)  Home Page, User Authentication (Devise and Omniauth)
+      4)  User Authentication (Devise and Omniauth)
+
+
+question  Use a form builder gem?
+      1)  None
+      2)  SimpleForm
+
+question  Enter your selection:
+question  Which RVM Ruby would you like to use? [ruby-1.9.3-p327]
+question  What name should the custom gemset have? [app_name] 
+question  Configure/Create Heroku app? [y/n]
+```
+
+## Hidden Features
+
+- Cleanup your app - Remove unused files
+- Database configurations - database.sample.yml
+- Flash messages partial
+- Header and Footer partial for layout
+- Great .giignore
+- Great and useful gems (Check the Gemfile :D)
+- Config the rails generators
+
+## Some Preferences
+
+- Slim
+- Sass
+- Init.js
+- Shoulda
+- Machinist
 
 
 ## Usage
@@ -54,28 +74,6 @@ rails new app_name -m ~/rails-template/template.rb
 
 4. That's it! Everything should be in place.
 
-
-## Usage with devise and omniauth
-
-If you will use devise and omniauth, switch the branch to devise-omniauth
-
-1. Clone rails-template to your home directory.
-```
-git clone git://github.com/josemarluedke/rails-template.git
-```
-
-2. Switch the branch to devise-omniauth
-```
-cd rails-template
-git checkout devise-omniauth
-```
-
-3. Run rails new app command using this template.
-```
-rails new app_name -m ~/rails-template/template.rb
-```
-
-4. That's it! Everything should be in place.
 
 ## Maintainer
 

@@ -24,12 +24,12 @@ describe User do
         @user.password_confirmation = nil
         @user.should_not be_valid
 
-        @user.password = "Josemar"
+        @user.password = "niceguy"
         @user.password_confirmation = nil
         @user.should_not be_valid
 
-        @user.password = "Josemar"
-        @user.password_confirmation = "Luedke"
+        @user.password = "niceguy"
+        @user.password_confirmation = "Guy"
         @user.should_not be_valid
       end
     end
@@ -41,7 +41,7 @@ describe User do
         end
 
       it "requires a password when password is present" do
-        @user.password = 'josemar'
+        @user.password = 'niceguy'
         @user.should be_password_required
       end
 
