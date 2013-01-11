@@ -1,5 +1,5 @@
 #-- Backbone.js --
-if prefer :javascript, 'backbone' or prefer :javascript, 'backbone_underscore'
+if ['backbone', 'backbone_underscore'].include? prefs[:javascript]
   puts "Adding the Backbone.js".magenta
 
   run "curl http://backbonejs.org/backbone.js > app/assets/javascripts/lib/backbone.js"
@@ -11,12 +11,12 @@ if prefer :javascript, 'backbone' or prefer :javascript, 'backbone_underscore'
 end
 
 #-- Underscore.js --
-if prefer :javascript, 'underscore' or prefer :javascript, 'backbone_underscore'
+if ['underscore', 'backbone_underscore'].include? prefs[:javascript]
   puts "Adding the Underscore.js".magenta
 
   run "curl http://documentcloud.github.com/underscore/underscore.js > app/assets/javascripts/lib/underscore.js"
 
-  if prefer :javascript, 'backbone' or prefer :javascript, 'backbone_underscore'
+  if ['backbone', 'backbone_underscore'].include? prefs[:javascript]
     gsub_file 'app/assets/javascripts/application.js', "//= require ./lib/backbone.js", "//= require ./lib/underscore.js
 //= require ./lib/backbone.js"
   else

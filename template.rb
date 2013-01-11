@@ -81,13 +81,20 @@ prefs[:javascript] = multiple_choice "What Javascript framework do you want use?
   [["None", "none"],
    ["Backbone.js", "backbone"],
    ["Underscore.js", "underscore"],
-   ["Backbone.js and Underscore.js", "backbone_underscore"]]
+   ["Backbone.js, Underscore.js", "backbone_underscore"]]
 
 # -- Google Analytics --
 prefs[:analytics] = yes_wizard? "Pre configure the Google Analytics?"
 
+# -- Starter app --
+prefs[:starter_app] =  multiple_choice "Install a starter app?",
+  [["None", "none"],
+   ["Home Page", "home"],
+   ["Home Page, User Authentication (Devise and Omniauth)", "home_devise"],
+   ["User Authentication (Devise and Omniauth)", "devise"]]
 
-prefs[:devise] = yes_wizard? "Use Devise with omniauth?"
+prefs[:devise] = true if ['devise', 'home_devise'].include? prefs[:starter_app]
+prefs[:home_page] = true if ['home', 'home_devise'].include? prefs[:starter_app]
 
 # -- SimpleFrom
 prefs[:form_builder] = 'simple_form' if prefs[:devise]
@@ -105,7 +112,7 @@ prefs[:desired_ruby] = ask_wizard("Which RVM Ruby would you like to use? [#{@cur
 prefs[:gemset_name] = ask_wizard("What name should the custom gemset have? [#{@app_name}]")
 
 # -- Heroku --
-prefs[:heroku] = yes_wizard?"Configure/Create Heroku app?"
+prefs[:heroku] = yes_wizard? "Configure/Create Heroku app?"
 if prefs[:heroku]
   prefs[:heroku_staging] = yes_wizard? "Create staging app? (#{@app_name.gsub('_','')}-staging.herokuapp.com)"
   prefs[:heroku_deploy] = yes_wizard? "Deploy immediately?"
@@ -124,6 +131,7 @@ apply_n :javascripts
 apply_n :backbone_underscore
 apply_n :stylesheets
 apply_n :generators
+apply_n :home_page if prefs[:home_page]
 apply_n :rvm
 apply_n :devise_omniauth if prefs[:devise]
 apply_n :simple_form if prefer :form_builder, 'simple_form'
