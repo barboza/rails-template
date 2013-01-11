@@ -1,6 +1,6 @@
 puts "Adding the defaults javascripts... ".magenta
 
-if would_you_like? "Do you want use CoffeeScript? [y,n]".red
+if prefs[:coffee]
   copy_static_file 'app/assets/javascripts/app.js.coffee'
 else
   copy_static_file 'app/assets/javascripts/app.js'

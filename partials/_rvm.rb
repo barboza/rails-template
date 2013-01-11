@@ -6,12 +6,12 @@ puts "Setting up RVM gemset and installing bundled gems (may take a while) ... "
 rvm_list = `rvm list`.gsub(Regexp.new("\e\\[.?.?.?m"), '')
 
 current_ruby = rvm_list.match(/=.? ([^ ]+)/)[1]
-desired_ruby = ask("Which RVM Ruby would you like to use? [#{current_ruby}]".red)
+desired_ruby = prefs[:desired_ruby]
 desired_ruby = current_ruby if desired_ruby.blank?
 
 @env = RVM::Environment.new(desired_ruby)
 
-gemset_name = ask("What name should the custom gemset have? [#{@app_name}]".red)
+gemset_name = prefs[:gemset_name]
 gemset_name = @app_name if gemset_name.blank?
 
 #This will work after my pull request gets accepted
@@ -25,7 +25,6 @@ puts "Now using gemset #{@app_name}"
 run "gem install bundler --no-ri --no-rdoc"
 
 # Install all other gems needed from Gemfile
-run "bundle install"
 copy_static_file '.rvmrc'
 gsub_file '.rvmrc', /PROJECT/, @app_name
 gsub_file '.rvmrc', /RUBYVERSION/, desired_ruby

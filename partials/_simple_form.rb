@@ -1,13 +1,13 @@
-if @use_devise_and_omniauth or would_you_like? "Do you want use the simple_form? [y,n]".red
-  gsub_file 'Gemfile', /#gem 'simple_form/, "gem 'simple_form"
+gsub_file 'Gemfile', /#gem 'simple_form/, "gem 'simple_form"
 
-  after_bundler do
-    if would_you_like? "Do you want use the simple_form with twitter bootstrap? [y,n]".red
-      generate 'simple_form:install --bootstrap'
-    else
-      generate 'simple_form:install'
-    end
-    git :add => '.'
-    git :commit => "-aqm 'Configures simple_form.'"
+after_bundler do
+  if prefer :wrappers_simple_form, 'bootstrap'
+    generate 'simple_form:install --bootstrap'
+  elsif prefer :wrappers_simple_form, 'foundation'
+    generate 'simple_form:install --foundation'
+  else
+    generate 'simple_form:install'
   end
+  git :add => '.'
+  git :commit => "-aqm 'Configures simple_form.'"
 end
