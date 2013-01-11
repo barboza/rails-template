@@ -9,5 +9,5 @@ after_bundler do
     generate 'simple_form:install'
   end
   git :add => '.'
-  git :commit => "-aqm 'Configures simple_form.'"
+  git :commit => "-aqm 'Configures simple_form'"
 end

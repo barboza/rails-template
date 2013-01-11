@@ -20,4 +20,4 @@ gsub_file 'app/assets/javascripts/application.js', "//= require_tree .", "
 "
 
 git :add => '.'
-git :commit => "-aqm 'Add defaults javascripts'"
+git :commit => "-aqm 'Adds default javascript things'"

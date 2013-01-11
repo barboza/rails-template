@@ -21,7 +21,7 @@ CONFIGS
     inject_into_file 'config/initializers/devise.rb', configs, {before: "\nend", verbose: false}
   end
   git :add => '.'
-  git :commit => "-aqm 'Configures Devise and Omniauth.'"
+  git :commit => "-aqm 'Configures Devise and Omniauth'"
 
   # -- Models --
   copy_static_file 'app/models/user.rb'
@@ -37,7 +37,7 @@ CONFIGS
   copy_static_file 'spec/support/blueprints.rb'
 
   git :add => '.'
-  git :commit => "-aqm 'Creates User and Authorization models.'"
+  git :commit => "-aqm 'Creates User and Authorization models'"
 
   # -- Controllers --
   copy_static_file 'app/controllers/users/omniauth_callbacks_controller.rb'
