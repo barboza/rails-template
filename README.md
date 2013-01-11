@@ -49,6 +49,7 @@ question  Configure/Create Heroku app? [y/n]
 - Great .gitignore
 - Great and useful gems (Check the Gemfile :D)
 - Config the rails generators
+- Devise views in slim and I18n
 
 ## Some Preferences
 
