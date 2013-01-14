@@ -73,9 +73,6 @@ prefs[:frontend] = multiple_choice "What front-end framework do you want to use?
    ["Twitter Bootstrap", "bootstrap"],
    ["Zurb Foundation", "foundation"]]
 
-# -- CoffeeScript --
-prefs[:coffee] = yes_wizard? "Do you want use CoffeeScript?"
-
 # -- Javascript frameworks --
 prefs[:javascript] = multiple_choice "What Javascript framework do you want to use?",
   [["None", "none"],
@@ -83,6 +80,9 @@ prefs[:javascript] = multiple_choice "What Javascript framework do you want to u
    ["Backbone.js", "backbone"],
    ["Underscore.js", "underscore"],
    ["Backbone.js, Underscore.js", "backbone_underscore"]]
+
+# -- CoffeeScript --
+prefs[:coffee] = yes_wizard? "Do you want use CoffeeScript?"
 
 # -- Google Analytics --
 prefs[:analytics] = yes_wizard? "Pre configure the Google Analytics?"

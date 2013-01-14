@@ -14,14 +14,14 @@ question  What front-end framework do you want to use?
       2)  Twitter Bootstrap
       3)  Zurb Foundation
 
-question  Do you want use CoffeeScript? [y/n]
-
 question  What Javascript framework do you want to use?
       1)  None
       2)  AngularJS
       3)  Backbone.js
       4)  Underscore.js
       5)  Backbone.js, Underscore.js
+
+question  Do you want use CoffeeScript? [y/n]
 
 question  Pre configure the Google Analytics? [y/n]
 
