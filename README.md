@@ -18,7 +18,7 @@ question  Do you want use CoffeeScript? [y/n]
 
 question  What Javascript framework do you want to use?
       1)  None
-      1)  AngularJS
+      2)  AngularJS
       3)  Backbone.js
       4)  Underscore.js
       5)  Backbone.js, Underscore.js
