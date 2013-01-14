@@ -36,6 +36,7 @@ question  Use a form builder gem?
       1)  None
       2)  SimpleForm
 
+question  Create a project-specific RVM gemset and .rvmrc? [y/n]
 question  Which RVM Ruby would you like to use? [ruby-1.9.3-p327]
 question  What name should the custom gemset have? [app_name]
 question  Configure/Create Heroku app? [y/n]
