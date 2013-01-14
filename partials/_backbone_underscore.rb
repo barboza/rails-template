@@ -2,6 +2,18 @@
 if ['backbone', 'backbone_underscore'].include? prefs[:javascript]
   puts "Adding the Backbone.js".magenta
 
+  # Default folders for backbone
+  run "mkdir app/assets/javascripts/app/routers"
+  run "mkdir app/assets/javascripts/app/routers/.gitkeep"
+  run "mkdir app/assets/javascripts/app/collections"
+  run "mkdir app/assets/javascripts/app/collections/.gitkeep"
+  run "mkdir app/assets/javascripts/app/models"
+  run "mkdir app/assets/javascripts/app/models/.gitkeep"
+  run "mkdir app/assets/javascripts/app/templates"
+  run "mkdir app/assets/javascripts/app/templates/.gitkeep"
+  run "mkdir app/assets/javascripts/app/views"
+  run "mkdir app/assets/javascripts/app/views/.gitkeep"
+
   run "curl http://backbonejs.org/backbone.js > app/assets/javascripts/lib/backbone.js"
   gsub_file 'app/assets/javascripts/application.js', "//= require_tree ./lib", "//= require ./lib/backbone.js
 //= require_tree ./lib"
