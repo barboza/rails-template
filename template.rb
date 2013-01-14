@@ -68,7 +68,7 @@ puts " RAILS TEMPLATE".yellow.bold
 puts "=========================================================\n"
 
 # -- Front-end frameworks --
-prefs[:frontend] = multiple_choice "What front-end framework do you want use?",
+prefs[:frontend] = multiple_choice "What front-end framework do you want to use?",
   [["None", "none"],
    ["Twitter Bootstrap", "bootstrap"],
    ["Zurb Foundation", "foundation"]]
@@ -77,8 +77,9 @@ prefs[:frontend] = multiple_choice "What front-end framework do you want use?",
 prefs[:coffee] = yes_wizard? "Do you want use CoffeeScript?"
 
 # -- Javascript frameworks --
-prefs[:javascript] = multiple_choice "What Javascript framework do you want use?",
+prefs[:javascript] = multiple_choice "What Javascript framework do you want to use?",
   [["None", "none"],
+   ["AngularJS", "angularjs"],
    ["Backbone.js", "backbone"],
    ["Underscore.js", "underscore"],
    ["Backbone.js, Underscore.js", "backbone_underscore"]]
@@ -129,6 +130,7 @@ apply_n :database
 apply_n :rspec
 apply_n :javascripts
 apply_n :backbone_underscore
+apply_n :angularjs
 apply_n :stylesheets
 apply_n :generators
 apply_n :home_page if prefs[:home_page]

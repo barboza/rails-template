@@ -9,18 +9,19 @@ The Rails Template will ask to you for various preferences, some of which will d
 Here’s an example:
 
 ```
-question  What front-end framework do you want use?
+question  What front-end framework do you want to use?
       1)  None
       2)  Twitter Bootstrap
       3)  Zurb Foundation
 
 question  Do you want use CoffeeScript? [y/n]
 
-question  What Javascript framework do you want use?
+question  What Javascript framework do you want to use?
       1)  None
-      2)  Backbone.js
-      3)  Underscore.js
-      4)  Backbone.js, Underscore.js
+      1)  AngularJS
+      3)  Backbone.js
+      4)  Underscore.js
+      5)  Backbone.js, Underscore.js
 
 question  Pre configure the Google Analytics? [y/n]
 

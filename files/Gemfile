@@ -37,6 +37,7 @@ group :assets do
   #gem 'turbolinks'
   #gem 'bootstrap-sass'
   #gem 'zurb-foundation'
+  #gem 'angular-rails'
 end
 
 group :production do
