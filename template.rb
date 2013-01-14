@@ -109,8 +109,11 @@ if prefer :form_builder, 'simple_form'
 end
 
 # -- RVM ---
-prefs[:desired_ruby] = ask_wizard("Which RVM Ruby would you like to use? [#{@current_ruby}]")
-prefs[:gemset_name] = ask_wizard("What name should the custom gemset have? [#{@app_name}]")
+prefs[:rvm] = yes_wizard? "Create a project-specific RVM gemset and .rvmrc?"
+if prefs[:rvm]
+  prefs[:desired_ruby] = ask_wizard("Which RVM Ruby would you like to use? [#{@current_ruby}]")
+  prefs[:gemset_name] = ask_wizard("What name should the custom gemset have? [#{@app_name}]")
+end
 
 # -- Heroku --
 prefs[:heroku] = yes_wizard? "Configure/Create Heroku app?"
@@ -134,7 +137,7 @@ apply_n :angularjs
 apply_n :stylesheets
 apply_n :generators
 apply_n :home_page if prefs[:home_page]
-apply_n :rvm
+apply_n :rvm if prefs[:rvm]
 apply_n :devise_omniauth if prefs[:devise]
 apply_n :simple_form if prefer :form_builder, 'simple_form'
 after_bundler do
@@ -142,6 +145,9 @@ after_bundler do
 end
 
 run 'bundle install'
+git :add => 'Gemfile.lock'
+git :commit => "-qm 'Adds Gemfile.lock'"
+
 puts "\nRunning after Bundler callbacks."
 @after_blocks.each{|b| config = @configs[b[0]] || {}; @current_recipe = b[0]; b[1].call}
 
