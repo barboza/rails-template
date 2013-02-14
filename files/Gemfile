@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.12'
 
 # Database
 gem 'pg'
@@ -18,8 +18,8 @@ gem 'rails-i18n'
 #gem 'devise-i18n'
 
 # Authentication
-#gem 'devise', '~> 2.1.2'
-#gem 'omniauth', '~> 1.1.1'
+#gem 'devise', '~> 2.2.3'
+#gem 'omniauth', '~> 1.1.2'
 #gem 'omniauth-facebook', '~> 1.4.1'
 #gem 'omniauth-twitter', '~> 0.0.14'
 
@@ -46,8 +46,8 @@ group :production do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 2.12.0'
-  gem 'shoulda-matchers', '~> 1.4.1'
+  gem 'rspec-rails', '~> 2.12.2'
+  gem 'shoulda-matchers', '~> 1.4.2'
   gem 'machinist', '~> 2.0'
   gem 'database_cleaner'
   gem 'capybara'
