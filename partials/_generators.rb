@@ -12,9 +12,6 @@ generators = <<GENERATORS
         :view_specs => false,
         :helper_specs => false
     end
-
-    # Prevent initializing your application and connect to the database on assets precompile.
-    config.assets.initialize_on_precompile = false
 GENERATORS
 in_root do
   inject_into_file 'config/application.rb', generators, {after: "Rails::Application", verbose: false}
