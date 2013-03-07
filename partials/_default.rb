@@ -13,6 +13,7 @@ git :commit => "-aqm 'Adds header and footer partial for layout'"
 
 
 copy_static_file 'app/views/layouts/application.html.slim'
+gsub_file 'app/views/layouts/application.html.slim', /INITJS_PROJECT/, @app_name.camelize
 gsub_file 'app/views/layouts/application.html.slim', /PROJECT/, @app_name
 git :add => '.'
 git :commit => "-aqm 'Adds application layout in slim'"
