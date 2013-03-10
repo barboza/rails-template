@@ -31,20 +31,21 @@ gem 'initjs'
 #gem 'rack-google-analytics'
 
 group :assets do
-  gem 'sass-rails',			'~> 4.0.0.beta1'
-  gem 'coffee-rails',		'~> 4.0.0.beta1'
-  gem 'compass-rails',	'~> 1.0.3'
-  gem 'uglifier',				'>= 1.0.3'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'compass-rails'
+  gem 'uglifier'
 	gem 'turbolinks'
   #gem 'bootstrap-sass'
   #gem 'zurb-foundation'
   #gem 'angular-rails'
 end
 
-group :production do
-  gem 'execjs'
-  gem 'therubyracer', platform: :ruby
-end
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+#group :production do
+  #gem 'execjs'
+  #gem 'therubyracer', platform: :ruby
+#end
 
 #group :heroku do
   #gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
@@ -52,9 +53,9 @@ end
 #end
 
 group :development, :test do
-  gem 'rspec-rails',			'~> 2.12.2'
-  gem 'shoulda-matchers', '~> 1.4.2'
-  gem 'machinist',				'~> 2.0'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'machinist'
   gem 'database_cleaner'
   gem 'capybara'
   gem 'pry'
@@ -63,5 +64,6 @@ end
 
 group :development do
   gem 'better_errors'
+	gem 'binding_of_caller'
   gem 'quiet_assets'
 end
