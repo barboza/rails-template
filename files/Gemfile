@@ -28,6 +28,7 @@ gem 'rails-i18n'
 gem 'jquery-rails'
 gem 'slim-rails'
 gem 'initjs'
+gem 'flutie'
 #gem 'rack-google-analytics'
 
 group :assets do
