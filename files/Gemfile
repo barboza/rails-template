@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.0.beta1'
+gem 'rails', '4.0.0.rc1'
 
 # Database
 gem 'pg'
@@ -31,16 +31,15 @@ gem 'initjs'
 gem 'flutie'
 #gem 'rack-google-analytics'
 
-group :assets do
-  gem 'sass-rails', '4.0.0.rc1'
-  gem 'coffee-rails', '4.0.0'
-  gem 'compass-rails'
-  gem 'uglifier'
-	gem 'turbolinks'
-  #gem 'bootstrap-sass'
-  #gem 'zurb-foundation'
-  #gem 'angular-rails'
-end
+# Assets
+gem 'sass-rails', '4.0.0.rc1'
+gem 'coffee-rails', '4.0.0'
+gem 'compass-rails'
+gem 'uglifier'
+gem 'turbolinks'
+#gem 'bootstrap-sass'
+#gem 'zurb-foundation'
+#gem 'angular-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 #group :production do
