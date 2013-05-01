@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13.rc2'
+gem 'rails', '4.0.0.rc1'
 
 # Database
 gem 'pg'
@@ -10,17 +10,16 @@ gem 'foreigner'
 gem 'thin'
 
 # Improvements
-gem 'strong_parameters'
+gem 'jbuilder'
 gem 'inherited_resources'
 #gem 'simple_form'
-#gem 'jbuilder'
 
 # I18n
 gem 'rails-i18n'
 #gem 'devise-i18n'
 
 # Authentication
-#gem 'devise'
+#gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
 #gem 'omniauth'
 #gem 'omniauth-facebook'
 #gem 'omniauth-twitter'
@@ -32,21 +31,25 @@ gem 'initjs'
 gem 'flutie'
 #gem 'rack-google-analytics'
 
-group :assets do
-  gem 'sass-rails'
-  gem 'coffee-rails'
-  gem 'compass-rails'
-  gem 'uglifier'
-  #gem 'turbolinks'
-  #gem 'bootstrap-sass'
-  #gem 'zurb-foundation'
-  #gem 'angular-rails'
-end
+# Assets
+gem 'sass-rails', '4.0.0.rc1'
+gem 'coffee-rails', '4.0.0'
+gem 'compass-rails'
+gem 'uglifier'
+gem 'turbolinks'
+#gem 'bootstrap-sass'
+#gem 'zurb-foundation'
+#gem 'angular-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 #group :production do
   #gem 'execjs'
   #gem 'therubyracer', platform: :ruby
+#end
+
+#group :heroku do
+  #gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+  #gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 #end
 
 group :development, :test do

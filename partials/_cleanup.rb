@@ -8,7 +8,6 @@ puts "Removing unnecessary files ... ".magenta
 remove_file "README"
 remove_file "app/views/layouts/application.html.erb"
 remove_file "app/assets/images/rails.png"
-remove_file "public/index.html"
 
 git :add => '.'
 git :commit => "-aqm 'Removes unnecessary files left over from initial app generation'"
