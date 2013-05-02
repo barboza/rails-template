@@ -76,6 +76,15 @@ rails new app_name -m ~/rails-template/template.rb
 
 4. That's it! Everything should be in place.
 
+## Rails versions
+
+### Rails 4
+
+The current master branch is for Rails 4 support.
+
+### Rails 3.2
+
+For generate a rails 3.2 application using this template, please use the `rails3.2-stable` branch.
 
 ## Maintainer
 
