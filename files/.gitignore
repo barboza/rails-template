@@ -13,5 +13,3 @@ capybara-*.html
 /spec/tmp/*
 **.orig
 config/database.yml
-db/schema.rb
-
