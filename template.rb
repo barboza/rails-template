@@ -10,7 +10,6 @@ require "rails"
 require "colored"
 require "bundler"
 
-@current_ruby = `rvm list`.gsub(Regexp.new("\e\\[.?.?.?m"), '').match(/=.? ([^ ]+)/)[1]
 @template_root = File.expand_path(File.join(File.dirname(__FILE__)))
 @partials     = File.join(@template_root, 'partials')
 @static_files = File.join(@template_root, 'files')
@@ -108,13 +107,6 @@ if prefer :form_builder, 'simple_form'
      ["Zurb Foundation", "foundation"]]
 end
 
-# -- RVM ---
-prefs[:rvm] = yes_wizard? "Create a project-specific RVM gemset and .rvmrc?"
-if prefs[:rvm]
-  prefs[:desired_ruby] = ask_wizard("Which RVM Ruby would you like to use? [#{@current_ruby}]")
-  prefs[:gemset_name] = ask_wizard("What name should the custom gemset have? [#{@app_name}]")
-end
-
 # -- Heroku --
 prefs[:heroku] = yes_wizard? "Configure/Create Heroku app?"
 if prefs[:heroku]
@@ -137,7 +129,6 @@ apply_n :angularjs
 apply_n :stylesheets
 apply_n :generators
 apply_n :home_page if prefs[:home_page]
-apply_n :rvm if prefs[:rvm]
 apply_n :devise_omniauth if prefs[:devise]
 apply_n :simple_form if prefer :form_builder, 'simple_form'
 after_bundler do
