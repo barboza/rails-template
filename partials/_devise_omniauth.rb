@@ -21,7 +21,7 @@ CONFIGS
     inject_into_file 'config/initializers/devise.rb', configs, {before: "\nend", verbose: false}
   end
   git :add => '.'
-  git :commit => "-aqm 'Configures Devise and Omniauth'"
+  git :commit => "-aqm 'Configure Devise and Omniauth'"
 
   # -- Models --
   copy_static_file 'app/models/user.rb'
@@ -37,7 +37,7 @@ CONFIGS
   copy_static_file 'spec/support/blueprints.rb'
 
   git :add => '.'
-  git :commit => "-aqm 'Creates User and Authorization models'"
+  git :commit => "-aqm 'Create User and Authorization models'"
 
   # -- Controllers --
   copy_static_file 'app/controllers/users/omniauth_callbacks_controller.rb'
@@ -55,7 +55,7 @@ CONFIGS
   run "cp -rf #{@static_files}/app/views/devise/ app/views/devise/"
   copy_static_file 'config/locales/devise.en.yml'
   git :add => '.'
-  git :commit => "-aqm 'Creates Devise views'"
+  git :commit => "-aqm 'Create Devise views'"
 
   in_root do
     run "rake db:migrate"

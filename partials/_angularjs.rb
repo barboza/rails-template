@@ -20,12 +20,12 @@ after_bundler do
 //= require_tree ./lib"
 
     git :add => '.'
-    git :commit => "-aqm 'Adds AngularJS'"
+    git :commit => "-aqm 'Add AngularJS'"
   end
 
   unless ['angularjs'].include? prefs[:javascript]
     gsub_file 'Gemfile', /\n  #gem 'angular-rails'/, ""
     git :add => '.'
-    git :commit => "-aqm 'Removes angular-rails from Gemfile'"
+    git :commit => "-aqm 'Remove angular-rails from Gemfile'"
   end
 end

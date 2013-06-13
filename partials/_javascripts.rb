@@ -9,11 +9,11 @@ gsub_file 'app/assets/javascripts/application.js', "//= require_tree .", "
 "
 
 git :add => '.'
-git :commit => "-aqm 'Adds default javascript things'"
+git :commit => "-aqm 'Add default javascript things'"
 
 after_bundler do
 	generate 'initjs:install'
 
 	git :add => '.'
-	git :commit => "-aqm 'Installs initjs'"
+	git :commit => "-aqm 'Install initjs'"
 end

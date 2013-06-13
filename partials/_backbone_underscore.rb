@@ -19,7 +19,7 @@ if ['backbone', 'backbone_underscore'].include? prefs[:javascript]
 //= require_tree ./lib"
 
   git :add => '.'
-  git :commit => "-qm 'Adds Backbone.js'"
+  git :commit => "-qm 'Add Backbone.js'"
 end
 
 #-- Underscore.js --
@@ -37,5 +37,5 @@ if ['underscore', 'backbone_underscore'].include? prefs[:javascript]
   end
 
   git :add => '.'
-  git :commit => "-qm 'Adds Underscore.js'"
+  git :commit => "-qm 'Add Underscore.js'"
 end

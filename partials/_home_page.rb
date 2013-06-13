@@ -4,5 +4,5 @@ after_bundler do
   generate :controller, "Home index"
   gsub_file 'config/routes.rb', /get \"home\/index\"/, 'root :to => "home#index"'
   git :add => '.'
-  git :commit => "-aqm 'Adds Home Page'"
+  git :commit => "-aqm 'Add Home Page'"
 end
