@@ -107,14 +107,6 @@ if prefer :form_builder, 'simple_form'
      ["Zurb Foundation", "foundation"]]
 end
 
-# -- Heroku --
-prefs[:heroku] = yes_wizard? "Configure/Create Heroku app?"
-if prefs[:heroku]
-  prefs[:heroku_staging] = yes_wizard? "Create staging app? (#{@app_name.gsub('_','')}-staging.herokuapp.com)"
-  prefs[:heroku_deploy] = yes_wizard? "Deploy immediately?"
-  prefs[:heroku_domain] = ask_wizard "Add custom domain(customdomain.com) or leave blank"
-end
-
 # -- Applys --
 apply_n :git
 apply_n :cleanup
@@ -131,13 +123,10 @@ apply_n :generators
 apply_n :home_page if prefs[:home_page]
 apply_n :devise_omniauth if prefs[:devise]
 apply_n :simple_form if prefer :form_builder, 'simple_form'
-after_bundler do
-  apply_n :heroku if prefs[:heroku]
-end
 
 run 'bundle install'
 git :add => 'Gemfile.lock'
-git :commit => "-qm 'Adds Gemfile.lock'"
+git :commit => "-qm 'Add Gemfile.lock'"
 
 puts "\nRunning after Bundler callbacks."
 @after_blocks.each{|b| config = @configs[b[0]] || {}; @current_recipe = b[0]; b[1].call}

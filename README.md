@@ -37,7 +37,6 @@ question  Use a form builder gem?
       2)  SimpleForm
 
 question  What name should the custom gemset have? [app_name]
-question  Configure/Create Heroku app? [y/n]
 ```
 
 ## Hidden Features
