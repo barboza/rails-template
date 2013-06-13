@@ -45,6 +45,7 @@ CONFIGS
 
   # -- Controller specs --
   copy_static_file 'spec/controllers/users/omniauth_callbacks_controller_spec.rb'
+  copy_static_file 'spec/controllers/authorizations_controller_spec.rb'
 
   # -- Routes --
   route "devise_for :users, :controllers => { :omniauth_callbacks => \"users/omniauth_callbacks\" }"
