@@ -26,7 +26,7 @@ end
 if ['underscore', 'backbone_underscore'].include? prefs[:javascript]
   puts "Adding the Underscore.js".magenta
 
-  run "curl http://documentcloud.github.com/underscore/underscore.js > app/assets/javascripts/lib/underscore.js"
+  run "curl http://underscorejs.org/underscore.js > app/assets/javascripts/lib/underscore.js"
 
   if ['backbone', 'backbone_underscore'].include? prefs[:javascript]
     gsub_file 'app/assets/javascripts/application.js', "//= require ./lib/backbone.js", "//= require ./lib/underscore.js
