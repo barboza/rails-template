@@ -32,8 +32,8 @@ gem 'flutie'
 #gem 'rack-google-analytics'
 
 # Assets
-gem 'sass-rails', '4.0.0'
-gem 'coffee-rails', '4.0.0'
+gem 'sass-rails', '4.0.1'
+gem 'coffee-rails', '4.0.1'
 gem 'uglifier'
 gem 'turbolinks'
 #gem 'bootstrap-sass'
