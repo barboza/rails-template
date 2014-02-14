@@ -56,12 +56,13 @@ group :development, :test do
 end
 
 group :development do
+  gem 'newrelic_rpm'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
 end
 
-# Heroku
 group :production do
-  gem 'rails_on_heroku'
+  # Heroku
+  gem 'rails_12factor'
 end
