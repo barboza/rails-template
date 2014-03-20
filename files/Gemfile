@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.2'
+gem 'rails', '4.0.4'
 
 # Database
 gem 'pg'
@@ -32,7 +32,7 @@ gem 'flutie'
 #gem 'rack-google-analytics'
 
 # Assets
-gem 'sass-rails', '4.0.1'
+gem 'sass-rails', '4.0.2'
 gem 'coffee-rails', '4.0.1'
 gem 'uglifier'
 gem 'turbolinks'
