@@ -21,7 +21,7 @@ after_bundler do
 CONFIGS
 
     in_root do
-      inject_into_file 'spec/spec_helper.rb', configs, {after: "do |config|", verbose: false}
+      inject_into_file 'spec/rails_helper.rb', configs, {after: "do |config|", verbose: false}
     end
 
     git :add => '.'

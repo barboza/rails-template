@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails'
 
 describe AuthorizationsController do
   let(:user) { User.make! }
