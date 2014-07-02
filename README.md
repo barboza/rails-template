@@ -95,7 +95,8 @@ For generate a rails 3.2 application using this template, please use the `rails3
 - Ramon Bispo - [@RamonPage](https://github.com/RamonPage)
 - Rafael Lima - [@rafaelp](https://github.com/rafaelp)
 - Irio Irineu Musskopf - [@irio](https://github.com/irio)
-
+- Rafael Barboza Cardoso - [@barboza](https://github.com/barboza)
+- 
 ## Contributing
 
 1. Fork it
