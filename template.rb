@@ -70,7 +70,8 @@ puts "=========================================================\n"
 prefs[:frontend] = multiple_choice "What front-end framework do you want to use?",
   [["None", "none"],
    ["Twitter Bootstrap", "bootstrap"],
-   ["Zurb Foundation", "foundation"]]
+   ["Zurb Foundation", "foundation"],
+   ["Thoughtbot Bourbon", "bourbon"]]
 
 # -- Javascript frameworks --
 prefs[:javascript] = multiple_choice "What Javascript framework do you want to use?",

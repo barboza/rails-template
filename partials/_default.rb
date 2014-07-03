@@ -38,6 +38,20 @@ gsub_file 'app/controllers/application_controller.rb', "end", "
   def render_404
     raise ActionController::RoutingError.new('Not Found')
   end
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name,
+                                                            :email,
+                                                            :password,
+                                                            :password_confirmation) }
+    devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:email,
+                                                            :password) }
+    devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name,
+                                                                   :email,
+                                                                   :password,
+                                                                   :password_confirmation,
+                                                                   :current_password) }
+  end
 end
 "
 git :add => '.'
